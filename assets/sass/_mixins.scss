@@ -1,0 +1,50 @@
+@mixin easeOut {
+	transition: all 2s ease-out;
+	
+}
+
+// Media Query
+@mixin mediaSm {
+	@media (max-width: 500px) {
+		@content;
+	}
+}
+
+@mixin mediaMd {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin mediaLg {
+	@media (min-width: 769px) and (max-width: 1170px) {
+		@content;
+	}
+}
+
+@mixin mediaXl {
+	@media (min-width: 1171px) {
+		@content;
+	}
+}
+
+@mixin mediaMin769px {
+	@media (min-width: 769px) {
+		@content;
+	}
+}
+
+@mixin media1366px {
+	@media (max-width: 1366px) {
+		@content;
+	}
+}
+
+
+@mixin linear-gradient($direction, $color-stops...) {
+	
+	background: nth(nth($color-stops, 1), 1);
+	background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+	background: linear-gradient($direction, $color-stops);
+}
+

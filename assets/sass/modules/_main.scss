@@ -1,0 +1,427 @@
+.container {
+	flex: 1 0 auto;
+}
+.main {
+	background-color: $lightGrey;
+	color: $lightGrey;
+}
+
+.home {
+	position: relative;
+	width: 100%;
+	height: 85vh;
+	@include mediaMd {
+		height: 60vh;
+	}
+
+	@include mediaSm {
+		height: 50vh;
+	}
+
+	&__left-triangle {
+		width: 100%;
+		height: 100%;
+		background-image: url('../img/code.jpg');
+		background-position: left;
+		background-repeat: no-repeat;
+		background-size: cover;
+		clip-path: polygon(0% 0, 0 100%, 100% 0%);
+		position: absolute;
+		transform: translateX(-1643px);
+		@include easeOut;
+
+		@include mediaSm {
+			transform: none;
+		}
+
+		&.slide-right {
+			//Slide in from left
+			transform: translateX(0%);
+		}
+	}
+
+	&__right-triangle {
+		width: 100%;
+		height: 100%;
+		background-image: url('../img/art.jpg');
+		background-position: left;
+		background-repeat: no-repeat;
+		background-size: cover;
+		clip-path: polygon(100% 0, 0% 100%, 100% 100vh);
+		position: absolute;
+		transform: translateX(1643px);
+		@include easeOut;
+
+		@include mediaSm {
+			transform: none;
+		}
+
+		&.slide-left {
+			//Slide in from right
+			transform: translateX(0%);
+		}
+	}
+
+	&__heading-1-1 {
+		position: absolute;
+		top: 30%;
+		left: 20%;
+
+		@include mediaLg {
+			left: 10%;
+		}
+
+		@include mediaMd {
+			top: 20%;
+			left: 10%;
+			font-size: 36px;
+		}
+
+		@include mediaSm {
+			left: 10%;
+			font-size: 26px;
+		}
+	}
+
+	&__heading-1-2 {
+		position: absolute;
+		top: 50%;
+		right: 20%;
+		color: $lightGrey;
+		@include mediaMd {
+			font-size: 36px;
+			right: 10%;
+		}
+
+		@include mediaSm {
+			font-size: 26px;
+		}
+	}
+	&__btn {
+		position: absolute;
+		top: 70%;
+		right: 20%;
+		padding: 16px;
+		transition: 0.5s;
+		text-decoration: none;
+		font-size: 20px;
+		border: 2px solid $aquaMarine;
+		&--blue {
+			color: $lightGrey;
+			background-color: $blue;
+		}
+		&--hover {
+			&:hover {
+				color: $blue;
+				background-color: $aquaMarine;
+				border-color: $blue;
+			}
+		}
+	}
+}
+
+.about {
+	background-image: url('/assets/img/pattern-background-2.jpg');
+	&__heading {
+		background-color: $blue;
+		color: $lightGrey;
+		border-bottom: solid 1px $aquaMarine;
+		@include mediaMd {
+			font-size: 26px;
+		}
+
+		@include mediaSm {
+			font-size: 22px;
+		}
+	}
+
+	&__body {
+		display: flex;
+		width: 80%;
+		margin: 0 auto;
+
+		@include media1366px {
+			width: 80%;
+		}
+
+		@include mediaMd {
+			width: 100%;
+		}
+
+		@include mediaSm {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		padding: 16px;
+		font-size: 20px;
+		@include mediaSm {
+			text-align: center;
+			font-size: 14px;
+		}
+	}
+	&__item-heading {
+		@include mediaSm {
+			text-align: center;
+			font-size: 18px;
+		}
+	}
+	&__text {
+		padding-bottom: 16px;
+	}
+	&__img {
+		border: 5px solid $aquaMarine;
+		border-radius: 50%;
+	}
+}
+
+.skills {
+	background-image: linear-gradient($lightBlue, $aquaMarine);
+
+	&__heading {
+		color: $blue;
+		border-bottom: solid 1px $blue;
+		@include mediaMd {
+			font-size: 26px;
+		}
+
+		@include mediaSm {
+			font-size: 22px;
+		}
+	}
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		grid-gap: 1rem;
+		padding: 1rem;
+		grid-auto-flow: row;
+		justify-items: center;
+
+		@include mediaMd {
+			grid-template-columns: repeat(6, 1fr);
+		}
+
+		@include mediaSm {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+}
+
+.portfolio {
+	background-color: $lightGrey;
+
+	@include media1366px {
+	}
+	@include mediaLg {
+		height: auto;
+	}
+	@include mediaMd {
+		height: auto;
+	}
+	&__heading {
+		background-color: $grey;
+		@include mediaMd {
+			font-size: 26px;
+		}
+
+		@include mediaSm {
+			font-size: 22px;
+		}
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 16px;
+		padding: 1rem 0;
+		padding: 16px;
+		grid-auto-flow: row;
+		justify-items: center;
+
+		@include mediaLg {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mediaMd {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mediaSm {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__card {
+		background-color: $blue;
+	}
+
+	&__btn {
+		display: block;
+		padding: 16px;
+		transition: 0.5s;
+		text-decoration: none;
+		font-size: 20px;
+
+		&--pink {
+			background-color: $pink;
+			color: $lightGrey;
+		}
+
+		&--blue {
+			background-color: $blue;
+			color: $lightGrey;
+		}
+
+		&--hover {
+			&:hover {
+				background-color: $aquaMarine;
+				color: $blue;
+			}
+		}
+
+		&__icon {
+			font-size: 20px;
+		}
+	}
+}
+
+.contact {
+	background-color: $lightBlue;
+	position: relative;
+	&__heading {
+		color: $blue;
+		border-bottom: solid 1px $blue;
+		@include mediaMd {
+			font-size: 26px;
+		}
+
+		@include mediaSm {
+			font-size: 22px;
+		}
+	}
+
+	&__form {
+		font-family: 'robotoRegular';
+		width: 60%;
+		margin: 16px auto 0;
+		font-size: 16px;
+		@include mediaLg {
+			width: 80%;
+		}
+		@include mediaMd {
+			width: 90%;
+		}
+		@include mediaSm {
+			width: 90%;
+		}
+	}
+
+	&__item {
+		margin: 0 0 16px;
+	}
+
+	&__item:nth-child(1) {
+		width: 49%;
+		float: left;
+		@include mediaSm {
+			width: 100%;
+			float: none;
+		}
+	}
+
+	&__item:nth-child(2) {
+		width: 49%;
+		float: right;
+		@include mediaSm {
+			width: 100%;
+			float: none;
+		}
+	}
+
+	&__input {
+		padding: 10px;
+		width: 100%;
+		outline: none;
+		letter-spacing: normal;
+		word-spacing: normal;
+		text-transform: none;
+		text-indent: 0px;
+		text-shadow: none;
+		border: none;
+		background-color: $lightGrey;
+		&--error {
+			&::-webkit-input-placeholder {
+				color: $pink;
+			}
+		}
+	}
+
+	&__message {
+		font-size: 14px;
+		padding: 10px;
+		width: 100%;
+		outline: none;
+		border: none;
+		background-color: $lightGrey;
+	}
+
+	&__btn {
+		padding: 11px 20px;
+		border: solid 2px $blue;
+		cursor: pointer;
+		font-weight: bold;
+		outline: none;
+		transition: 0.5s;
+		@include mediaSm {
+			width: 100%;
+		}
+		&--blue {
+			color: $lightGrey;
+			background-color: $blue;
+		}
+
+		&--hover {
+			&:hover {
+				background-color: $lightGrey;
+				color: $blue;
+			}
+		}
+		&--disabled {
+			&:disabled {
+				color: $lightBlue;
+				background-color: $lightGrey;
+				border-color: $blue;
+			}
+		}
+	}
+
+	&__response-message {
+		font-weight: bold;
+		width: 60%;
+		color: $blue;
+		padding: 10px;
+		margin: 16px auto;
+	}
+	&__loader {
+		border: 16px solid $lightGrey;
+		border-top: 16px solid $pink;
+		border-radius: 50%;
+		width: 120px;
+		height: 120px;
+		animation: spin 2s linear infinite;
+		position: absolute;
+		left: 45%;
+		top: 20%;
+		display: none;
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

@@ -1,0 +1,73 @@
+.header {
+    height: auto;
+    background-color: $blue;
+    display: flex;
+    @include mediaMd {
+       flex-direction: column;
+        position: relative;
+    }
+}
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: $blueOpacity;
+    transition: top 0.5s ease-in-out;
+ }
+
+.logo {
+    flex: 1;
+    margin: auto 0px auto 20px;
+    padding: 10px 0;
+   
+    &__item {
+        width: 80px;
+    }
+}
+
+.contact-info {
+    flex: 2;
+    padding: 0;
+    line-height: 40px;
+    margin: auto 20px auto 0;
+    color: $lightGrey;
+    text-align: right;
+    &__email {
+        padding-left: 5px;
+        
+    }
+    &__icon {
+        font-size: 20px;
+    }
+    @include mediaMd {
+        flex: 2;
+        margin: 0;
+        padding: 16px;
+        position: absolute;
+        right: 0;
+        top: 55px;
+    }
+}
+
+.hamburger {
+    position: absolute;
+    top: 0;
+    right: 16px;
+    display: none;
+    margin: 5px;
+    cursor: pointer;
+    @include mediaMd {
+        display: block;
+       
+    }
+    &__element {
+        display: block;
+        width: 35px;
+        height: 3px;
+        background-color: $lightGrey;
+        margin: 7px 0;
+
+    }
+}

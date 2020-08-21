@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html  {
+    background-color: #f3f3f3;
+}
+html,
+body {
+    height: 100%;
+  
+}
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 1366px;
+    margin: 2rem auto 1rem;
+    font-family: 'robotoRegular';
+    filter: drop-shadow(2px 11px 15px #ccc);
+}
+   
+
+h1, h2, h3 {
+    font-family: 'robotoBold';
+}
+h1, h2 {
+    color: white;
+}
+
+h1 {
+    font-size: 48px;
+    
+}
+h2 {
+    font-size: 36px;
+    text-align: center;
+    padding: 2rem 0;
+   
+}
+h3 {
+    font-size: 28px;
+    text-align: left;
+    padding: 2rem 0;
+}
+p {
+    font-size: 16px;
+    letter-spacing: .5px;
+    line-height: 1.5;
+    
+}
+
+a {
+    letter-spacing: 1.5px;
+}
+
+button {
+    font-family: 'robotoRegular';
+}
+
+img{
+    width: 100%;
+}
+
+section {
+    
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    font-family: 'robotoRegular';
+}
+
+

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jorgen's Portfolio</title>
+		<link
+			href="/assets/icons/fontawesome-free-5.13.0-web/css/brands.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="/assets/icons/fontawesome-free-5.13.0-web/css/fontawesome.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="/assets/icons/fontawesome-free-5.13.0-web/css/solid.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header id="header" class="header">
+				<a href="#home" id="logo" class="logo">
+					<img
+						class="logo__item"
+						src="/assets/logo/logo-aqua-2.png"
+						alt="logo"
+					/>
+				</a>
+				<nav id="nav" class="nav">
+					<div class="nav__navbar">
+						<a
+							data-section="about"
+							class="nav__link nav__link--color nav__link--hover"
+							href="#about"
+							>About</a
+						>
+						<div class="nav__divider"></div>
+						<a
+							data-section="skills"
+							class="nav__link nav__link--color nav__link--hover"
+							href="#skills"
+							>Skills</a
+						>
+						<div class="nav__divider"></div>
+						<a
+							data-section="portfolio"
+							class="nav__link nav__link--color nav__link--hover"
+							href="#portfolio"
+							>Portfolio</a
+						>
+						<div class="nav__divider"></div>
+						<a
+							data-section="contact"
+							class="nav__link nav__link--color nav__link--hover"
+							href="#contact"
+							>Contact</a
+						>
+					</div>
+				</nav>
+				<div class="contact-info">
+					<p class="contact-info__email">
+						<i class="fas fa-envelope contact-info__icon"></i>
+						<span class="contact__email">jorgen.arnes@gmail.com</span>
+					</p>
+				</div>
+				<div id="hamburger" class="hamburger">
+					<div class="hamburger__element"></div>
+					<div class="hamburger__element"></div>
+					<div class="hamburger__element"></div>
+				</div>
+				<div aiv class="navbar">
+					<a
+						class="navbar__link navbar__link--color navbar__link--hover"
+						href="#about"
+						>About</a
+					>
+					<div class="nav__divider"></div>
+					<a
+						class="navbar__link navbar__link--color navbar__link--hover"
+						href="#skills"
+						>Skills</a
+					>
+					<div class="nav__divider"></div>
+					<a
+						class="navbar__link navbar__link--color navbar__link--hover"
+						href="#portfolio"
+						>Portfolio</a
+					>
+					<div class="nav__divider"></div>
+					<a
+						class="navbar__link navbar__link--color navbar__link--hover"
+						href="#contact"
+						>Contact</a
+					>
+				</div>
+			</header>
+
+			<main class="main">
+				<section id="home" class="home">
+					<div id="left-triangle" class="home__left-triangle">
+						<h1 class="home__heading-1-1">Front-End Developer</h1>
+					</div>
+					<div id="right-triangle" class="home__right-triangle">
+						<h1 class="home__heading-1-2">&#38; Designer</h1>
+						<a
+							href="#portfolio"
+							class="home__btn home__btn--blue home__btn--hover"
+						>
+							Go to Portfolio <i class="fas fa-mouse-pointer"></i>
+						</a>
+					</div>
+				</section>
+				<section id="about" class="about">
+					<h2 class="about__heading" data-aos="fade-down">About Me</h2>
+					<div class="about__body">
+						<div class="about__item" data-aos="fade-right">
+							<h3 class="about__item-heading">Hello I'm Jørgen</h3>
+							<p class="about__text">
+								I'm a junior Front-End developer from Norway with high focus on
+								user experience, user interface and technology.
+							</p>
+							<p class="about__text">
+								Beside studying at Noroff I'm open to gain more knowledge
+								through real projects from companies who also are looking for a
+								potential Front-End developer.
+							</p>
+							<p class="about__text">
+								So far I have acquired powerfull skills for building appealing
+								and responsive websites that meets the today's criteria.
+							</p>
+							<p class="about__text">
+								To see some examples of what I have worked with lately, check
+								out some of my projects in the portfolio section.
+							</p>
+						</div>
+						<div class="about__item" data-aos="fade-left">
+							<img
+								class="about__img"
+								src="assets/img/IMG_4924.jpg"
+								alt="Profile image"
+							/>
+						</div>
+					</div>
+					<!-- row -->
+				</section>
+				<section id="skills" class="skills">
+					<h2 class="skills__heading" data-aos="fade-down">My Skills</h2>
+					<div class="skills__row"></div>
+				</section>
+				<section id="portfolio" class="portfolio">
+					<h2 class="portfolio__heading" data-aos="fade-down">Portfolio</h2>
+					<div class="portfolio__cards"></div>
+				</section>
+				<section id="contact" class="contact">
+					<h2 class="contact__heading" data-aos="fade-down">Contact Me</h2>
+					<div class="contact__loader"></div>
+					<div class="contact__response-message" id="responseMessage"></div>
+
+					<form id="contactForm" class="contact__form">
+						<div class="contact__item">
+							<input
+								type="text"
+								id="name"
+								class="contact__input contact__input--error"
+								name="name"
+								placeholder="Your name *"
+							/>
+						</div>
+						<div class="contact__item">
+							<input
+								type="text"
+								id="email"
+								class="contact__input contact__input--error"
+								placeholder="Your Email *"
+							/>
+						</div>
+						<div class="contact__item">
+							<input
+								type="text"
+								id="subject"
+								class="contact__input contact__input--error"
+								name="subject"
+								placeholder="Subject *"
+							/>
+						</div>
+						<div class="contact__item">
+							<textarea
+								name="message"
+								id="message"
+								class="contact__message contact__input--error"
+								cols="30"
+								rows="10"
+								placeholder="Message"
+							></textarea>
+						</div>
+
+						<button
+							id="sendButton"
+							type="submit"
+							class="contact__btn contact__btn--blue contact__btn--hover contact__btn--disabled"
+						>
+							Send a message
+						</button>
+					</form>
+				</section>
+			</main>
+		</div>
+		<!-- container -->
+		<footer class="footer">
+			<div class="footer__item">
+				<p>Copyright</p>
+			</div>
+			<div class="footer__item">
+				<a
+					class="footer__link footer__link--hover"
+					href="https://www.linkedin.com/in/jorgen-arnes-70991625"
+				>
+					<i class="fab fa-linkedin footer__icon"></i> LinkedIn
+				</a>
+				<a class="footer__link footer__link--hover" href="https://github.com/">
+					<i class="fab fa-github footer__icon"></i> Github
+				</a>
+			</div>
+		</footer>
+		<script src="assets/js/jquery-3.5.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
