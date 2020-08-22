@@ -359,7 +359,7 @@ form {
 }
 
 .about {
-  background: url("/assets/img/pattern-background-2.jpg");
+  background: url("../../img/pattern-background-2.jpg");
 }
 .about__heading {
   background-color: #19274d;
