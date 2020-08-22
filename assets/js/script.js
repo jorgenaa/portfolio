@@ -66,7 +66,7 @@ const assets = [
 		icon: 'assets/icons/XD.png',
 	},
 	{
-		icon: 'assets/icons/WordPress.png',
+		icon: 'assets/icons/Wordpress.png',
 	},
 	{
 		icon: 'assets/icons/Scrum.png',
