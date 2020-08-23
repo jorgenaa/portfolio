@@ -346,16 +346,31 @@ form {
   transition: 0.5s;
   text-decoration: none;
   font-size: 20px;
-  border: 2px solid #3CFFFE;
+  border: 2px solid #19274d;
+}
+@media (max-width: 768px) {
+  .home__btn {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .home__btn {
+    font-size: 16px;
+    padding: 12px;
+  }
 }
 .home__btn--blue {
-  color: #f3f3f3;
-  background-color: #19274d;
-}
-.home__btn--hover:hover {
   color: #19274d;
   background-color: #3CFFFE;
-  border-color: #19274d;
+}
+.home__btn--pink {
+  color: #E0006C;
+  background-color: #f3f3f3;
+}
+.home__btn--hover:hover {
+  color: #f3f3f3;
+  background-color: #19274d;
+  border-color: #3CFFFE;
 }
 
 .about {
@@ -403,7 +418,6 @@ form {
 }
 .about__item {
   padding: 16px;
-  font-size: 20px;
 }
 @media (max-width: 500px) {
   .about__item {
@@ -419,6 +433,16 @@ form {
 }
 .about__text {
   padding-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .about__text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .about__text {
+    font-size: 12px;
+  }
 }
 .about__img {
   border: 5px solid #3CFFFE;
