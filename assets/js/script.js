@@ -122,7 +122,8 @@ const email = document.querySelector('#email');
 const emailError = document.querySelector('#email').attributes[3];
 let emailHasError = false;
 
-const url = "https://reqres.in/api/users";
+const url =
+	'https://sdaot6lkal.execute-api.us-east-2.amazonaws.com/default/SendEmail';
 
 sendButton.addEventListener('click', sendUser);
 
@@ -144,34 +145,28 @@ async function sendUser(e) {
 	};
 
 	try {
-		const response = await fetch(url, {
+		fetch(url, {
 			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
 			body: JSON.stringify(data),
+		}).then(response => {
+			console.log('result', response);
+			if (response.status === 400) {
+				responseMessage.innerHTML = 'An error occurred: ' + response.statusText;
+			} else {
+				responseMessage.innerHTML = 'Message is sent';
+				name.value = '';
+				email.value = '';
+				subject.value = '';
+				message.value = '';
+				// 	disable the button once the form has been submitted
+				sendButton.disabled = true;
+			}
 		});
-		const result = await response.json();
-		console.log('result', result);
-
-		 if (response.status === 400) {
-		 	responseMessage.innerHTML = 'An error occurred: ' + response.statusText;
-		 } else {
-		 	responseMessage.innerHTML = 'Message is sent';
-			name.value = '';
-			email.value = '';
-			subject.value = '';
-			message.value = '';
-		// 	disable the button once the form has been submitted
-			sendButton.disabled = true;
-	}
 	} catch (error) {
 		console.log(error);
 		responseMessage.innerHTML = JSON.stringify(error);
-		 responseMessage.innerHTML = 'Message is not sent';
-		
-	}
-	finally{
+		responseMessage.innerHTML = 'Message is not sent';
+	} finally {
 		loader.style.display = 'none';
 		form.style.opacity = 1;
 	}
@@ -247,11 +242,11 @@ function validateForm(e) {
 	if (
 		!validateEmail(email.value) ||
 		!checkInputLength(name.value, 3) ||
-        !checkInputLength(subject.value, 3) ||
-        !checkInputLength(message.value, 5) 
+		!checkInputLength(subject.value, 3) ||
+		!checkInputLength(message.value, 5)
 	) {
 		disabled = true;
-	} 
+	}
 	sendButton.disabled = disabled;
 }
 
