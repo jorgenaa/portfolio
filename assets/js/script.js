@@ -4,6 +4,7 @@ const home = document.getElementById('home');
 
 let leftTriangle = document.querySelector('.home__left-triangle');
 let rightTriangle = document.querySelector('.home__right-triangle');
+let homeBtn = document.querySelector('.home__btn');
 let logo = document.getElementById('logo');
 
 const observeTheSlide = new IntersectionObserver(slide);
@@ -12,6 +13,7 @@ function slide() {
 	setTimeout(() => {
 		leftTriangle.classList.toggle('slide-right');
 		rightTriangle.classList.toggle('slide-left');
+		homeBtn.classList.toggle('ctaAnimation');
 	}, 100);
 }
 

@@ -268,7 +268,7 @@ form {
   clip-path: polygon(0% 0, 0 100%, 100% 0%);
   position: absolute;
   transform: translateX(-1643px);
-  transition: all 2s ease-out;
+  transition: all 2s ease-in-out;
 }
 @media (max-width: 500px) {
   .home__left-triangle {
@@ -288,7 +288,7 @@ form {
   clip-path: polygon(100% 0, 0% 100%, 100% 100vh);
   position: absolute;
   transform: translateX(1643px);
-  transition: all 2s ease-out;
+  transition: all 2s ease-in-out;
 }
 @media (max-width: 500px) {
   .home__right-triangle {
@@ -343,10 +343,15 @@ form {
   top: 70%;
   right: 20%;
   padding: 16px;
-  transition: 0.5s;
+  transition-duration: 0.5s;
   text-decoration: none;
   font-size: 20px;
   border: 2px solid #19274d;
+  opacity: 0;
+}
+.home__btn.ctaAnimation {
+  animation: cta 2s forwards ease-in-out;
+  animation-delay: 2s;
 }
 @media (max-width: 768px) {
   .home__btn {
@@ -358,14 +363,14 @@ form {
     font-size: 16px;
     padding: 12px;
   }
+  .home__btn.ctaAnimation {
+    animation: none;
+    opacity: 1;
+  }
 }
 .home__btn--blue {
   color: #19274d;
   background-color: #3CFFFE;
-}
-.home__btn--pink {
-  color: #E0006C;
-  background-color: #f3f3f3;
 }
 .home__btn--hover:hover {
   color: #f3f3f3;
@@ -373,6 +378,18 @@ form {
   border-color: #3CFFFE;
 }
 
+@keyframes cta {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    color: #f3f3f3;
+    background-color: #19274d;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .about {
   width: 100%;
   height: 100%;
@@ -541,7 +558,8 @@ form {
 .portfolio__btn {
   display: block;
   padding: 16px;
-  transition: 0.5s;
+  transition-duration: 1s;
+  transition-property: background-color;
   text-decoration: none;
   font-size: 20px;
 }

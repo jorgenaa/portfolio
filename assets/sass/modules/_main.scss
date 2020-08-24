@@ -28,7 +28,7 @@
 		clip-path: polygon(0% 0, 0 100%, 100% 0%);
 		position: absolute;
 		transform: translateX(-1643px);
-		@include easeOut;
+		@include easeInOut;
 
 		@include mediaSm {
 			transform: none;
@@ -37,6 +37,7 @@
 		&.slide-right {
 			//Slide in from left
 			transform: translateX(0%);
+			
 		}
 	}
 
@@ -50,7 +51,8 @@
 		clip-path: polygon(100% 0, 0% 100%, 100% 100vh);
 		position: absolute;
 		transform: translateX(1643px);
-		@include easeOut;
+	
+		@include easeInOut;
 
 		@include mediaSm {
 			transform: none;
@@ -59,6 +61,7 @@
 		&.slide-left {
 			//Slide in from right
 			transform: translateX(0%);
+		
 		}
 	}
 
@@ -102,10 +105,16 @@
 		top: 70%;
 		right: 20%;
 		padding: 16px;
-		transition: 0.5s;
+		transition-duration: .5s;
 		text-decoration: none;
 		font-size: 20px;
 		border: 2px solid $blue;
+		opacity: 0;
+		&.ctaAnimation{
+		animation: cta 2s forwards ease-in-out;
+		animation-delay: 2s;
+		}
+
 		@include mediaMd {
 			font-size: 16px;
 		}
@@ -113,24 +122,35 @@
 		@include mediaSm {
 			font-size: 16px;
 			padding: 12px;
+			&.ctaAnimation{
+				animation: none;
+				opacity: 1;
+				}
 		}
 		&--blue {
 			color: $blue;
 			background-color: $aquaMarine;
+			
 		}
-		&--pink {
-			color: $pink;
-			background-color: $lightGrey;
-		}
+		
 		&--hover {
 			&:hover {
 				color: $lightGrey;
 				background-color:  $blue;
 				border-color: $aquaMarine;
+			
 			}
 		}
 	}
 }
+ @keyframes cta {
+	 0%{opacity: 0;}
+	 50%{	color: $lightGrey;
+		background-color: $blue;
+		}
+ 	100%{opacity:1; }
+ }
+
 
 .about {
 	width: 100%;
@@ -284,10 +304,11 @@
 	&__btn {
 		display: block;
 		padding: 16px;
-		transition: 0.5s;
+		transition-duration: 1s;
+		transition-property: background-color;
 		text-decoration: none;
 		font-size: 20px;
-
+		
 		&--pink {
 			background-color: $pink;
 			color: $lightGrey;
@@ -302,6 +323,7 @@
 			&:hover {
 				background-color: $aquaMarine;
 				color: $blue;
+			
 			}
 		}
 
