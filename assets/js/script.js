@@ -79,7 +79,7 @@ const skillsContainer = document.getElementById('skills').childNodes[3];
 
 for (let i = 0; i < assets.length; i++) {
 	skillsContainer.innerHTML += `
-			<img class="skills__icon" src="${assets[i].icon}" alt="icons" data-aos="fade-right">
+			<img class="skills__icon animated" src="${assets[i].icon}" alt="icons" data-aos="fade-right">
 	`;
 }
 
@@ -87,7 +87,7 @@ const portfolioContainer = document.getElementById('portfolio').childNodes[3];
 
 for (let i = 0; i < 4; i++) {
 	portfolioContainer.innerHTML += `
-			<div class="portfolio__card" src="${i}" alt="card" data-aos="fade-right">
+			<div class="portfolio__card animated" src="${i}" alt="card" data-aos="fade-right">
 				<div class="portfolio__card-body">
 					<img class="portfolio__card-img" src="${assets[i].img}" alt="">
 					<a href="${assets[i].github}" class="portfolio__btn portfolio__btn--blue portfolio__btn--hover">
@@ -149,7 +149,7 @@ async function sendUser(e) {
 			method: 'POST',
 			body: JSON.stringify(data),
 		}).then(response => {
-			console.log('result', response);
+			
 			if (response.status === 400) {
 				responseMessage.innerHTML = 'An error occurred: ' + response.statusText;
 			} else {
@@ -359,11 +359,15 @@ sectionObserver.observe(skills);
 sectionObserver.observe(portfolio);
 sectionObserver.observe(contact);
 
+
 //Initialize AOS
 AOS.init({
 	offset: 400,
 	duration: 1000,
 });
+
+
+
 
 //Initialize Smooth Scroll
 const scroll = new SmoothScroll(

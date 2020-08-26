@@ -24,6 +24,9 @@
    
     &__item {
         width: 80px;
+        @include mediaSm {
+            width: 60px;
+        }
     }
 }
 
@@ -48,6 +51,13 @@
         position: absolute;
         right: 0;
         top: 55px;
+    }
+    @include mediaSm {
+      
+        padding: 0px 16px;
+        position: absolute;
+        right: 0;
+        top: 50px;
     }
 }
 

@@ -74,6 +74,16 @@ form {
   font-family: "robotoRegular";
 }
 
+@media (max-width: 500px) {
+  body {
+    margin-top: 0;
+  }
+
+  section {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+}
 @font-face {
   font-family: "robotoRegular";
   src: url("../font/Roboto/Roboto-Regular.ttf");
@@ -187,6 +197,11 @@ form {
 .logo__item {
   width: 80px;
 }
+@media (max-width: 500px) {
+  .logo__item {
+    width: 60px;
+  }
+}
 
 .contact-info {
   flex: 2;
@@ -210,6 +225,14 @@ form {
     position: absolute;
     right: 0;
     top: 55px;
+  }
+}
+@media (max-width: 500px) {
+  .contact-info {
+    padding: 0px 16px;
+    position: absolute;
+    right: 0;
+    top: 50px;
   }
 }
 
@@ -317,7 +340,7 @@ form {
 }
 @media (max-width: 500px) {
   .home__heading-1-1 {
-    left: 10%;
+    left: 5%;
     font-size: 26px;
   }
 }
@@ -440,6 +463,7 @@ form {
   .about__item {
     text-align: center;
     font-size: 14px;
+    padding: 0 16px;
   }
 }
 @media (max-width: 500px) {
@@ -454,11 +478,6 @@ form {
 @media (max-width: 768px) {
   .about__text {
     font-size: 14px;
-  }
-}
-@media (max-width: 500px) {
-  .about__text {
-    font-size: 12px;
   }
 }
 .about__img {
@@ -716,6 +735,28 @@ form {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .animated {
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
   }
 }
 .footer {
