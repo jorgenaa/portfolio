@@ -367,8 +367,6 @@ AOS.init({
 });
 
 
-
-
 //Initialize Smooth Scroll
 const scroll = new SmoothScroll(
 	'.nav__navbar a[href*="#"], .home__btn, #logo',
