@@ -360,12 +360,6 @@ sectionObserver.observe(portfolio);
 sectionObserver.observe(contact);
 
 
-//Initialize AOS
-AOS.init({
-	offset: 400,
-	duration: 1000,
-});
-
 
 //Initialize Smooth Scroll
 const scroll = new SmoothScroll(
