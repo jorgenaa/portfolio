@@ -32,7 +32,7 @@ const assets = [
 		icon: 'assets/icons/CSS.png',
 		img: 'assets/img/code_1024x768.jpg',
 		github: 'https://github.com/jorgenaa/Covid-19-app',
-		website: '#',
+		website: 'https://jorgenaa.github.io/Covid-19-app/',
 	},
 	{
 		icon: 'assets/icons/JavaScript.png',
