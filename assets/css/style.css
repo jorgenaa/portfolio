@@ -15,12 +15,12 @@ body {
 
 body {
   width: 100%;
-  display: flex;
-  flex-direction: column;
   max-width: 1366px;
   margin: 2rem auto 1rem;
   font-family: "robotoRegular";
   filter: drop-shadow(2px 11px 15px #ccc);
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -92,6 +92,24 @@ form {
   font-family: "robotoBold";
   src: url("../font/Roboto/Roboto-Bold.ttf");
 }
+.scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.scroll::-webkit-scrollbar {
+  width: 16px;
+}
+.scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #19274d;
+  background: #19274d;
+}
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #3CFFFE;
+  box-shadow: inset 0 0 6px rgba(25, 39, 77, 0.8);
+  border: 3px solid #19274d;
+}
+
 .nav {
   flex: 3;
   line-height: 40px;
@@ -415,7 +433,6 @@ form {
 }
 .about {
   width: 100%;
-  height: 100%;
   background: url("../img/pattern-background-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -737,33 +754,11 @@ form {
     transform: rotate(360deg);
   }
 }
-@media only screen and (max-width: 768px) {
-  .animated {
-    /*CSS transitions*/
-    -o-transition-property: none !important;
-    -moz-transition-property: none !important;
-    -ms-transition-property: none !important;
-    -webkit-transition-property: none !important;
-    transition-property: none !important;
-    /*CSS transforms*/
-    -o-transform: none !important;
-    -moz-transform: none !important;
-    -ms-transform: none !important;
-    -webkit-transform: none !important;
-    transform: none !important;
-    /*CSS animations*/
-    -webkit-animation: none !important;
-    -moz-animation: none !important;
-    -o-animation: none !important;
-    -ms-animation: none !important;
-    animation: none !important;
-  }
-}
 .footer {
   display: flex;
-  justify-content: center;
-  margin: 0 auto 1rem;
   flex-shrink: 0;
+  justify-content: center;
+  margin: 0px auto 1rem;
   height: 150px;
   width: 100%;
   max-width: 1366px;

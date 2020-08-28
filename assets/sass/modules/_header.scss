@@ -2,11 +2,13 @@
     height: auto;
     background-color: $blue;
     display: flex;
+   
     @include mediaMd {
        flex-direction: column;
         position: relative;
     }
 }
+
 .sticky {
     position: sticky;
     position: -webkit-sticky;

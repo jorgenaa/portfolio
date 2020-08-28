@@ -11,9 +11,9 @@ const observeTheSlide = new IntersectionObserver(slide);
 
 function slide() {
 	setTimeout(() => {
-		leftTriangle.classList.toggle('slide-right');
-		rightTriangle.classList.toggle('slide-left');
-		homeBtn.classList.toggle('ctaAnimation');
+		leftTriangle.classList.add('slide-right');
+		rightTriangle.classList.add('slide-left');
+		homeBtn.classList.add('ctaAnimation');
 	}, 100);
 }
 
@@ -26,7 +26,7 @@ const assets = [
 		icon: 'assets/icons/HTML.png',
 		img: 'assets/img/castle.jpg',
 		github: 'https://github.com/jorgenaa/Semester_project_2',
-		website: '#',
+		website: 'https://jorgenaa.github.io/Semester_project_2/',
 	},
 	{
 		icon: 'assets/icons/CSS.png',
@@ -38,13 +38,13 @@ const assets = [
 		icon: 'assets/icons/JavaScript.png',
 		img: 'assets/img/Endeavour_In_Space.jpg',
 		github: 'https://github.com/jorgenaa/Project-Exam-1',
-		website: '#',
+		website: 'https://jorgenaa.github.io/Project-Exam-1/',
 	},
 	{
 		icon: 'assets/icons/Bootstrap.png',
 		img: 'assets/img/design_page.jpg',
 		github: 'https://github.com/jorgenaa/Design_2_Module_Assignment',
-		website: '#',
+		website: 'https://jorgenaa.github.io/Design_2_Module_Assignment/',
 	},
 	{
 		icon: 'assets/icons/Sass.png',
@@ -149,7 +149,6 @@ async function sendUser(e) {
 			method: 'POST',
 			body: JSON.stringify(data),
 		}).then(response => {
-			
 			if (response.status === 400) {
 				responseMessage.innerHTML = 'An error occurred: ' + response.statusText;
 			} else {
@@ -318,15 +317,17 @@ const stickyHeaderPosition = {
 	rootMargin: '-200px 0px 0px 0px',
 };
 
-const headerObserver = new IntersectionObserver(function (
+const headerObserver = new IntersectionObserver((
 	entries,
-	headerObserver
-) {
+	
+)=> {
 	entries.forEach(entry => {
 		if (!entry.isIntersecting) {
 			header.classList.add('sticky');
+			
 		} else {
 			header.classList.remove('sticky');
+			
 		}
 	});
 },
@@ -360,11 +361,16 @@ sectionObserver.observe(portfolio);
 sectionObserver.observe(contact);
 
 
+//Smooth scroll function
+const anchors = document.querySelectorAll('a[href^="#"]');
 
-//Initialize Smooth Scroll
-const scroll = new SmoothScroll(
-	'.nav__navbar a[href*="#"], .home__btn, #logo',
-	{
-		speed: 800,
-	}
-);
+anchors.forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+			behavior: 'smooth'
+			
+        });
+    });
+});
