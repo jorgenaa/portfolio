@@ -2,14 +2,17 @@
 .scroll {
   overflow-y: auto;
   overflow-x: hidden;
- 
+  scrollbar-color: $aquaMarine $blue;
 
 &::-webkit-scrollbar {
   width: 16px;
  
 }
 
+
 &::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px $blue;
+  -moz-webkit-box-shadow: inset 0 0 6px $blue;
   box-shadow: inset 0 0 6px $blue;
   background: $blue;
 }
@@ -17,6 +20,7 @@
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: $aquaMarine;
+    -webkit-box-shadow: inset 0 0 6px $blueOpacity; 
     box-shadow: inset 0 0 6px $blueOpacity; 
     border: 3px solid $blue;
   

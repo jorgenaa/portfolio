@@ -6,6 +6,7 @@
 
 html {
   background-color: #f3f3f3;
+  scrollbar-color: #3CFFFE #19274d;
 }
 
 html,
@@ -95,17 +96,21 @@ form {
 .scroll {
   overflow-y: auto;
   overflow-x: hidden;
+  scrollbar-color: #3CFFFE #19274d;
 }
 .scroll::-webkit-scrollbar {
   width: 16px;
 }
 .scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #19274d;
+  -moz-webkit-box-shadow: inset 0 0 6px #19274d;
   box-shadow: inset 0 0 6px #19274d;
   background: #19274d;
 }
 .scroll::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #3CFFFE;
+  -webkit-box-shadow: inset 0 0 6px rgba(25, 39, 77, 0.8);
   box-shadow: inset 0 0 6px rgba(25, 39, 77, 0.8);
   border: 3px solid #19274d;
 }
