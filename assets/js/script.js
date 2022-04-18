@@ -23,6 +23,12 @@ observeTheSlide.observe(home);
 
 const assets = [
 	{
+		icon: 'assets/icons/JavaScript.png',
+		img: 'assets/img/code_1024x768.jpg',
+		github: '',
+		website: 'https://nextmongodbrestaurant-jorgenaa.vercel.app/',
+	},
+	{
 		icon: 'assets/icons/HTML.png',
 		img: 'assets/img/castle.jpg',
 		github: 'https://github.com/jorgenaa/Semester_project_2',
@@ -35,12 +41,6 @@ const assets = [
 		website: 'https://jorgenaa.github.io/Covid-19-app/',
 	},
 	{
-		icon: 'assets/icons/JavaScript.png',
-		img: 'assets/img/Endeavour_In_Space.jpg',
-		github: 'https://github.com/jorgenaa/Project-Exam-1',
-		website: 'https://jorgenaa.github.io/Project-Exam-1/',
-	},
-	{
 		icon: 'assets/icons/Bootstrap.png',
 		img: 'assets/img/design_page.jpg',
 		github: 'https://github.com/jorgenaa/Design_2_Module_Assignment',
@@ -49,14 +49,14 @@ const assets = [
 	{
 		icon: 'assets/icons/Sass.png',
 		img: 'assets/img/code_1024x768.jpg',
-		github: '#',
+		github: 'https://github.com/jorgenaa/JS2-CA',
 		website: '#',
 	},
 	{
 		icon: 'assets/icons/GitHub.png',
 		img: 'assets/img/code_1024x768.jpg',
-		github: '#',
-		website: '#',
+		github: 'https://github.com/jorgenaa/project-exam-2',
+		website: 'https://holidaze-project-exam-2.netlify.app/',
 	},
 	{
 		icon: 'assets/icons/Illustrator.png',
@@ -72,6 +72,15 @@ const assets = [
 	},
 	{
 		icon: 'assets/icons/Scrum.png',
+	},
+	{
+		icon: 'assets/icons/react.png',
+	},
+	{
+		icon: 'assets/icons/mongodb.png',
+	},
+	{
+		icon: 'assets/icons/tailwind.png',
 	},
 ];
 
